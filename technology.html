@@ -177,6 +177,7 @@ section{ padding-block:clamp(3.5rem,7vw,6.5rem); }
 
 .photo-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(1rem,2vw,1.5rem); }
 .wrap-wide{ max-width:2260px; }
+.wrap-xwide{ max-width:2620px; padding-inline:clamp(1rem,2vw,1.5rem); }
 .see-it-section{ padding-block:clamp(1.5rem,3vw,2.5rem) clamp(1rem,2vw,1.5rem); }
 .photo-grid-lg{ gap:clamp(1.5rem,2.6vw,2.25rem); }
 .photo-grid-lg .photo-real{ aspect-ratio:1/1; }
@@ -196,7 +197,8 @@ section{ padding-block:clamp(3.5rem,7vw,6.5rem); }
 .photo-real.contain img{ width:100%; height:100%; object-fit:contain; }
 .photo-real figcaption{ position:absolute; left:0; right:0; bottom:0; padding:0.6rem 0.85rem; font-family:var(--mono); font-size:0.68rem; letter-spacing:0.03em; color:#F4F5F1; background:linear-gradient(0deg, rgba(10,14,20,0.72), rgba(10,14,20,0)); }
 .tech-card-photo .photo-real{ aspect-ratio:16/10; }
-.gallery-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(1rem,2vw,1.5rem); }
+.gallery-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(0.85rem,1.6vw,1.25rem); }
+.gallery-grid .photo-real{ aspect-ratio:5/4; }
 @media (max-width:760px){ .gallery-grid{grid-template-columns:1fr 1fr;} }
 @media (max-width:520px){ .gallery-grid{grid-template-columns:1fr;} }
 .facility-grid{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(1rem,2vw,1.5rem); margin-top:clamp(2.5rem,4vw,3.5rem); }
@@ -437,7 +439,7 @@ footer{ background:var(--hero-bg); color:var(--hero-text); }
     </div>
 </section>
 <section style="padding-block:clamp(1.5rem,3vw,2.5rem);">
-    <div class="wrap wrap-wide">
+    <div class="wrap wrap-xwide">
       <div class="section-head">
         <span class="eyebrow eyebrow-ink">In Detail</span>
         <h2>What's in the system.</h2>

@@ -195,6 +195,8 @@ section{ padding-block:clamp(3.5rem,7vw,6.5rem); }
 @media (max-width:760px){ .photo-grid{grid-template-columns:1fr 1fr;} }
 @media (max-width:520px){ .photo-grid{grid-template-columns:1fr;} }
 .tech-card-photo{ margin-bottom:1.5rem; }
+.tech-card-photo-transparent{ margin-bottom:1.75rem; display:flex; align-items:center; justify-content:center; min-height:320px; }
+.tech-card-photo-transparent img{ width:100%; max-width:440px; height:auto; max-height:440px; object-fit:contain; display:block; }
 .tech-card-photo .photo-placeholder{ aspect-ratio:16/10; }
 
 .photo-real{ aspect-ratio:4/3; border-radius:var(--radius); overflow:hidden; background:var(--surface); border:1px solid var(--border); position:relative; }
@@ -217,7 +219,7 @@ section{ padding-block:clamp(3.5rem,7vw,6.5rem); }
 .tech-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--border); border:1px solid var(--border); }
 .tech-card{ background:var(--surface); padding:clamp(1.75rem,3vw,2.5rem); }
 .tech-card-head{ display:flex; align-items:center; gap:0.9rem; margin-bottom:1.5rem; }
-.tech-card h3{ font-size:1.6rem; font-weight:800; }
+.tech-card h3{ font-size:clamp(1.9rem,2.4vw,2.4rem); font-weight:800; }
 .tech-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:0.85rem; }
 .tech-list li{ display:flex; gap:0.7rem; color:var(--text-muted); font-size:0.96rem; line-height:1.5; }
 .tech-list li::before{ content:""; flex:none; width:5px;height:5px; margin-top:0.55rem; background:var(--accent); }
@@ -230,12 +232,13 @@ section{ padding-block:clamp(3.5rem,7vw,6.5rem); }
 @media (max-width:820px){ .apps-grid{grid-template-columns:1fr;} }
 
 .benefits{ background:var(--surface); }
-.benefits-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(1.5rem,3vw,2.5rem); }
-.benefit-photo{ width:150px; height:150px; border-radius:50%; overflow:hidden; margin-bottom:1.25rem; background:var(--surface); border:1px solid var(--border); }
+.benefits .section-head h2{ font-size:clamp(2rem,2.4vw+1rem,2.9rem); }
+.benefits-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(2rem,3.5vw,3rem); margin-top:clamp(1rem,2vw,1.5rem); }
+.benefit-photo{ width:220px; height:220px; border-radius:50%; overflow:hidden; margin-bottom:1.5rem; background:var(--surface); border:1px solid var(--border); }
 .benefit-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
-.benefit-label{ font-family:var(--mono); font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent-ink); }
-.benefit h3{ margin-top:0.6rem; font-size:1.3rem; }
-.benefit-list{ margin:0.85rem 0 0; padding-left:1.1rem; color:var(--text-muted); font-size:0.95rem; line-height:1.55; display:flex; flex-direction:column; gap:0.5rem; }
+.benefit-label{ font-family:var(--mono); font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent-ink); }
+.benefit h3{ margin-top:0.6rem; font-size:clamp(1.4rem,1.6vw,1.7rem); }
+.benefit-list{ margin:1rem 0 0; padding-left:1.1rem; color:var(--text-muted); font-size:1.05rem; line-height:1.6; display:flex; flex-direction:column; gap:0.6rem; }
 @media (max-width:820px){ .benefits-grid{grid-template-columns:1fr; gap:2rem;} }
 
 .spec-table{ width:100%; border-collapse:collapse; font-size:0.95rem; }
@@ -409,7 +412,7 @@ footer{ background:var(--hero-bg); color:var(--hero-text); }
     <div class="wrap">
       <div class="tech-grid">
         <div class="tech-card">
-          <div class="tech-card-photo"><figure class="photo-real contain"><img src="assets/677673d174f6e96a.png" alt="LightningWire guidewire" loading="lazy"></figure></div>
+          <div class="tech-card-photo-transparent"><img src="assets/889c4fb9c406cd07.png" alt="LightningWire guidewire" loading="lazy"></div>
           <div class="tech-card-head">
             <h3>LightningWire Guidewire</h3>
           </div>
@@ -421,7 +424,7 @@ footer{ background:var(--hero-bg); color:var(--hero-text); }
           </ul>
         </div>
         <div class="tech-card">
-          <div class="tech-card-photo"><figure class="photo-real contain"><img src="assets/68bf5cf25e52c959.png" alt="LightningWire Activation Cable" loading="lazy"></figure></div>
+          <div class="tech-card-photo-transparent"><img src="assets/83b78bddeb49e98b.png" alt="LightningWire Activation Cable" loading="lazy"></div>
           <div class="tech-card-head">
             <h3>Activation Cable</h3>
           </div>
@@ -435,23 +438,7 @@ footer{ background:var(--hero-bg); color:var(--hero-text); }
       </div>
     </div>
 </section>
-<section style="padding-block:clamp(1.5rem,3vw,2.5rem);">
-    <div class="wrap wrap-xwide">
-      <div class="section-head">
-        <span class="eyebrow eyebrow-ink">In Detail</span>
-        <h2>What's in the system.</h2>
-      </div>
-      <div class="gallery-grid">
-        <figure class="photo-real"><img src="assets/74650d285b554233.jpg" alt="LightningWire TPS sterile packaging tray" loading="lazy"><figcaption>Sterile packaging — guidewire, cable &amp; tip straightener</figcaption></figure>
-        <figure class="photo-real"><img src="assets/1f91b64757872e50.jpg" alt="LightningWire distal tip with visible markers" loading="lazy"><figcaption>Visible markers on the LightningWire tip</figcaption></figure>
-        <figure class="photo-real"><img src="assets/4ad09d5913134f43.jpg" alt="LightningWire with transseptal introducer sheath" loading="lazy"><figcaption>Compatible with 0.032&Prime;&ndash;0.035&Prime; introducer sets</figcaption></figure>
-        <figure class="photo-real"><img src="assets/fd72d770528704a3.jpg" alt="Activation Cable ESG connector" loading="lazy"><figcaption>Standard monopolar ESG connector</figcaption></figure>
-        <figure class="photo-real"><img src="assets/69e05f6c02ab2b20.jpg" alt="Activation Cable connected to a Megadyne Mega Power generator set to 15 watts cut" loading="lazy"><figcaption>Connected to a standard electrosurgical generator</figcaption></figure>
-      </div>
-      <p class="disclaimer-note">Images above may show compatible third&#8209;party components for demonstration only. No affiliation or endorsement is implied.</p>
-    </div>
-  </section>
-<section class="benefits" style="padding-block:clamp(1.5rem,3vw,2.5rem);">
+<section class="benefits" style="padding-block:clamp(2.5rem,5vw,4rem);">
     <div class="wrap">
       <div class="section-head">
         <span class="eyebrow eyebrow-ink">Why LightningWire</span>

@@ -552,12 +552,14 @@ document.addEventListener('keydown', function(e){
       var radial = ctx.createRadialGradient(ax, ay, 0, ax, ay, r);
       radial.addColorStop(0, accentColor); radial.addColorStop(1, 'rgba(0,0,0,0)');
       ctx.globalAlpha = flash * 0.55; ctx.beginPath(); ctx.fillStyle = radial; ctx.arc(ax, ay, r, 0, Math.PI * 2); ctx.fill(); ctx.globalAlpha = 1;
-      ctx.strokeStyle = accentColor; ctx.lineWidth = 1.6; ctx.globalAlpha = flash;
-      var spikes = [[-10,-14],[-4,-22],[3,-16],[9,-24]];
-      ctx.beginPath(); ctx.moveTo(ax - 14, ay);
-      spikes.forEach(function(s){ ctx.lineTo(ax + s[0], ay + s[1]); });
-      ctx.lineTo(ax + 16, ay); ctx.stroke(); ctx.globalAlpha = 1;
-      ctx.beginPath(); ctx.fillStyle = accentColor; ctx.arc(ax, ay, 3.2, 0, Math.PI * 2); ctx.fill();
+      var boltPts = [[1.5,-15],[-13.5,3],[0,3],[-1.5,15],[13.5,-3],[0,-3]];
+      ctx.beginPath();
+      boltPts.forEach(function(p, i){
+        var bx = ax + p[0], by = ay + p[1];
+        if (i === 0) ctx.moveTo(bx, by); else ctx.lineTo(bx, by);
+      });
+      ctx.closePath();
+      ctx.fillStyle = accentColor; ctx.globalAlpha = flash * 0.5; ctx.fill(); ctx.globalAlpha = 1;
     }
   }
   var raf;

@@ -278,13 +278,22 @@ section{ padding-block:clamp(3.5rem,7vw,6.5rem); }
 .isi-rev{ font-family:var(--mono); font-size:0.78rem; color:var(--text-muted); margin-top:2rem; }
 
 .ifu-doc{ max-width:820px; }
-.ifu-doc h3{ font-family:var(--display); font-size:1.15rem; font-weight:700; margin-top:2.5rem; }
+.ifu-doc h3{ font-family:var(--display); font-size:1.15rem; font-weight:700; margin-top:2.5rem; scroll-margin-top:6.5rem; }
 .ifu-doc h3:first-of-type{ margin-top:0; }
 .ifu-doc h4{ font-family:var(--display); font-size:0.98rem; font-weight:700; margin-top:1.25rem; }
 .ifu-doc p{ margin-top:0.75rem; color:var(--text-muted); font-size:0.97rem; line-height:1.65; }
 .ifu-doc ul, .ifu-doc ol{ margin:0.75rem 0 0; padding-left:1.3rem; color:var(--text-muted); font-size:0.95rem; line-height:1.68; display:flex; flex-direction:column; gap:0.5rem; }
-.ifu-download{ display:flex; align-items:center; gap:1rem; flex-wrap:wrap; padding:1.25rem 1.5rem; border:1px solid var(--border-strong); border-radius:var(--radius); background:var(--surface); margin-bottom:2.5rem; }
+.ifu-download{ display:flex; align-items:center; gap:1rem; flex-wrap:wrap; padding:1.25rem 1.5rem; border:1px solid var(--border-strong); border-radius:var(--radius); background:var(--surface); margin-bottom:1.5rem; max-width:820px; }
 .ifu-download p{ margin:0; color:var(--text-muted); font-size:0.9rem; }
+.ifu-toc{ max-width:820px; border:1px solid var(--border-strong); border-radius:var(--radius); padding:1.5rem 1.75rem; margin-bottom:2.5rem; }
+.ifu-toc h4{ font-family:var(--mono); font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-muted); margin:0 0 1.1rem; font-weight:500; }
+.ifu-toc ol{ display:grid; grid-template-columns:1fr 1fr; gap:0.3rem 2rem; list-style:none; margin:0; padding:0; counter-reset:ifu-toc; }
+.ifu-toc li{ counter-increment:ifu-toc; }
+.ifu-toc a{ display:flex; gap:0.65rem; align-items:baseline; color:var(--text); text-decoration:none; font-size:0.92rem; font-weight:600; padding:0.4rem 0; border-bottom:1px solid var(--border); }
+.ifu-toc li:last-child a{ border-bottom:none; }
+.ifu-toc a:hover{ color:var(--accent-ink); }
+.ifu-toc a::before{ content:counter(ifu-toc, decimal-leading-zero); font-family:var(--mono); font-size:0.78rem; color:var(--accent-ink); font-weight:600; flex:none; }
+@media (max-width:640px){ .ifu-toc ol{grid-template-columns:1fr;} }
 .ifu-table{ width:100%; border-collapse:collapse; margin-top:0.75rem; font-size:0.9rem; }
 .ifu-table th, .ifu-table td{ text-align:left; padding:0.6rem 0.8rem; border:1px solid var(--border); vertical-align:top; }
 .ifu-table th{ font-family:var(--mono); font-size:0.66rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--text-muted); background:var(--surface); }
@@ -447,7 +456,7 @@ footer{ background:var(--hero-bg); color:var(--hero-text); }
 </footer>
 <div class="safety-strip" style="background:var(--hero-bg-2); border-top:1px solid rgba(244,245,241,0.1);">
   <div class="wrap" style="padding-block:0.9rem;">
-    <p style="font-family:var(--mono); font-size:0.76rem; color:var(--hero-muted);">LightningWire&trade; Transseptal Puncture System &mdash; Rx only. See <a href="isi.html" style="color:var(--hero-text); text-decoration:underline; text-underline-offset:2px;">Important Safety Information</a>.</p>
+    <p style="font-family:var(--mono); font-size:0.76rem; color:var(--hero-muted);">LightningWire&trade; Transseptal Puncture System &mdash; Rx only. See <a href="ifu.html" style="color:var(--hero-text); text-decoration:underline; text-underline-offset:2px;">Instructions for Use</a> and <a href="isi.html" style="color:var(--hero-text); text-decoration:underline; text-underline-offset:2px;">Important Safety Information</a>.</p>
   </div>
 </div>
 

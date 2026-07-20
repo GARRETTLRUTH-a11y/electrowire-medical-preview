@@ -217,7 +217,7 @@ section{ padding-block:clamp(3.5rem,7vw,6.5rem); }
 .tech-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--border); border:1px solid var(--border); }
 .tech-card{ background:var(--surface); padding:clamp(1.75rem,3vw,2.5rem); }
 .tech-card-head{ display:flex; align-items:center; gap:0.9rem; margin-bottom:1.5rem; }
-.tech-card h3{ font-size:1.25rem; font-weight:700; }
+.tech-card h3{ font-size:1.6rem; font-weight:800; }
 .tech-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:0.85rem; }
 .tech-list li{ display:flex; gap:0.7rem; color:var(--text-muted); font-size:0.96rem; line-height:1.5; }
 .tech-list li::before{ content:""; flex:none; width:5px;height:5px; margin-top:0.55rem; background:var(--accent); }
@@ -231,9 +231,11 @@ section{ padding-block:clamp(3.5rem,7vw,6.5rem); }
 
 .benefits{ background:var(--surface); }
 .benefits-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(1.5rem,3vw,2.5rem); }
+.benefit-photo{ width:150px; height:150px; border-radius:50%; overflow:hidden; margin-bottom:1.25rem; background:var(--surface); border:1px solid var(--border); }
+.benefit-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
 .benefit-label{ font-family:var(--mono); font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent-ink); }
-.benefit h3{ margin-top:0.6rem; font-size:1.2rem; }
-.benefit p{ margin-top:0.75rem; color:var(--text-muted); font-size:0.95rem; }
+.benefit h3{ margin-top:0.6rem; font-size:1.3rem; }
+.benefit-list{ margin:0.85rem 0 0; padding-left:1.1rem; color:var(--text-muted); font-size:0.95rem; line-height:1.55; display:flex; flex-direction:column; gap:0.5rem; }
 @media (max-width:820px){ .benefits-grid{grid-template-columns:1fr; gap:2rem;} }
 
 .spec-table{ width:100%; border-collapse:collapse; font-size:0.95rem; }
@@ -321,9 +323,10 @@ section{ padding-block:clamp(3.5rem,7vw,6.5rem); }
 .contact-info-item dd{ margin:0.4rem 0 0; font-size:1.1rem; font-weight:600; }
 .contact-info-item dd a{ color:var(--text); text-decoration:none; }
 .contact-info-item dd a:hover{ color:var(--accent-ink); }
-.contact-social{ display:flex; gap:1rem; margin-top:0.5rem; }
-.contact-social a{ font-size:0.9rem; font-weight:600; color:var(--text-muted); text-decoration:none; border-bottom:1px solid var(--border-strong); padding-bottom:2px; }
-.contact-social a:hover{ color:var(--text); }
+.contact-social{ display:flex; gap:1.5rem; margin-top:0.5rem; }
+.contact-social a{ display:inline-flex; align-items:center; gap:0.5rem; font-size:0.98rem; font-weight:600; color:var(--text-muted); text-decoration:none; border-bottom:1px solid var(--border-strong); padding-bottom:3px; }
+.contact-social a svg{ width:20px; height:20px; flex:none; }
+.contact-social a:hover{ color:var(--accent-ink); }
 .form-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; }
 .form-field{ display:flex; flex-direction:column; gap:0.5rem; }
 .form-field.full{ grid-column:1 / -1; }
@@ -456,19 +459,32 @@ footer{ background:var(--hero-bg); color:var(--hero-text); }
       </div>
       <div class="benefits-grid">
         <div class="benefit">
+          <div class="benefit-photo"><img src="assets/4ad09d5913134f43.jpg" alt="LightningWire with transseptal introducer sheath" loading="lazy"></div>
           <span class="benefit-label">Efficiency</span>
           <h3>Fewer exchanges, faster workflow</h3>
-          <p>Guidewire&#8209;based transseptal puncture minimizes catheter exchanges. The Activation Cable immediately disconnects after transseptal puncture to enable therapy device delivery, and visible markers facilitate fluoroscopy&#8209;free workflows.</p>
+          <ul class="benefit-list">
+            <li>Guidewire&#8209;based transseptal puncture minimizes catheter exchanges</li>
+            <li>Activation Cable immediately disconnects after transseptal puncture to enable therapy device delivery</li>
+            <li>Visible markers facilitate fluoroscopy&#8209;free workflows</li>
+          </ul>
         </div>
         <div class="benefit">
+          <div class="benefit-photo"><img src="assets/69e05f6c02ab2b20.jpg" alt="Activation Cable connected to an electrosurgical generator" loading="lazy"></div>
           <span class="benefit-label">Safety</span>
           <h3>Designed to limit injury risk</h3>
-          <p>Compared to crossing at higher power settings, such as 50&thinsp;W, lower power settings have been associated with reduced thermal injury to inter&#8209;atrial septal tissue.<sup class="fn">4</sup> Pigtail tip shape minimizes risk of cardiovascular injury after transseptal puncture.<sup class="fn">5</sup></p>
+          <ul class="benefit-list">
+            <li>Compared to crossing at higher power settings, such as 50&thinsp;W, lower power settings have been associated with reduced thermal injury to inter&#8209;atrial septal tissue<sup class="fn">4</sup></li>
+            <li>Pigtail tip shape minimizes risk of cardiovascular injury after transseptal puncture<sup class="fn">5</sup></li>
+          </ul>
         </div>
         <div class="benefit">
+          <div class="benefit-photo"><img src="assets/fd72d770528704a3.jpg" alt="Activation Cable ESG connector" loading="lazy"></div>
           <span class="benefit-label">Value</span>
           <h3>Works with equipment already in the lab</h3>
-          <p>Since existing electrosurgical generators may be used, capital expense may be eliminated. Disposable cost is competitive with alternatives.</p>
+          <ul class="benefit-list">
+            <li>Since existing electrosurgical generators may be used, capital expense may be eliminated</li>
+            <li>Disposable cost is competitive with alternatives</li>
+          </ul>
         </div>
       </div>
     </div>

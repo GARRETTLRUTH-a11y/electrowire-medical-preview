@@ -195,8 +195,8 @@ section{ padding-block:clamp(3.5rem,7vw,6.5rem); }
 @media (max-width:760px){ .photo-grid{grid-template-columns:1fr 1fr;} }
 @media (max-width:520px){ .photo-grid{grid-template-columns:1fr;} }
 .tech-card-photo{ margin-bottom:1.5rem; }
-.tech-card-photo-transparent{ margin-bottom:2rem; display:flex; align-items:center; justify-content:center; min-height:600px; }
-.tech-card-photo-transparent img{ width:100%; max-width:880px; height:auto; max-height:820px; object-fit:contain; display:block; }
+.tech-card-photo-transparent{ margin-bottom:2rem; display:flex; align-items:flex-end; justify-content:center; }
+.tech-card-photo-transparent img{ width:100%; max-width:600px; height:auto; max-height:520px; object-fit:contain; display:block; }
 .tech-card-photo .photo-placeholder{ aspect-ratio:16/10; }
 
 .photo-real{ aspect-ratio:4/3; border-radius:var(--radius); overflow:hidden; background:var(--surface); border:1px solid var(--border); position:relative; }
@@ -401,7 +401,7 @@ footer{ background:var(--hero-bg); color:var(--hero-text); }
       <p style="max-width:70ch; color:var(--text-muted); font-size:1.05rem;">The LightningWire TPS is designed to maximize electrosurgical performance, mechanical performance, compatibility, efficiency, safety, and value. Minimally invasive catheter ablation, left atrial appendage occlusion, and transcatheter mitral valve procedures are all streamlined.</p>
     </div>
   </section>
-<section class="tech" style="padding-top:0; padding-bottom:clamp(1.5rem,3vw,2.5rem);">
+<section class="tech" style="padding-top:clamp(1rem,2vw,1.5rem); padding-bottom:clamp(1.5rem,3vw,2.5rem);">
     <div class="wrap">
       <div class="section-head">
         <span class="eyebrow eyebrow-ink">Technology</span>
@@ -409,7 +409,7 @@ footer{ background:var(--hero-bg); color:var(--hero-text); }
         <p>LightningWire separates the transseptal step into a guidewire built for handling and an activation cable built for control &mdash; so the puncture happens on cue, not by feel alone.</p>
       </div>
     </div>
-    <div class="wrap wrap-wide">
+    <div class="wrap">
       <div class="tech-grid">
         <div class="tech-card">
           <div class="tech-card-photo-transparent"><img src="assets/889c4fb9c406cd07.png" alt="LightningWire guidewire" loading="lazy"></div>
@@ -439,7 +439,7 @@ footer{ background:var(--hero-bg); color:var(--hero-text); }
     </div>
 </section>
 <section class="benefits" style="padding-block:clamp(2.5rem,5vw,4rem);">
-    <div class="wrap wrap-wide">
+    <div class="wrap">
       <div class="section-head">
         <span class="eyebrow eyebrow-ink">Why LightningWire</span>
         <h2>Efficiency, safety, and value in one system.</h2>

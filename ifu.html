@@ -280,26 +280,8 @@ section{ padding-block:clamp(3.5rem,7vw,6.5rem); }
 .isi-legal p + p{ margin-top:0.5rem; }
 .isi-rev{ font-family:var(--mono); font-size:0.78rem; color:var(--text-muted); margin-top:2rem; }
 
-.ifu-doc{ max-width:820px; }
-.ifu-doc h3{ font-family:var(--display); font-size:1.15rem; font-weight:700; margin-top:2.5rem; scroll-margin-top:6.5rem; }
-.ifu-doc h3:first-of-type{ margin-top:0; }
-.ifu-doc h4{ font-family:var(--display); font-size:0.98rem; font-weight:700; margin-top:1.25rem; }
-.ifu-doc p{ margin-top:0.75rem; color:var(--text-muted); font-size:0.97rem; line-height:1.65; }
-.ifu-doc ul, .ifu-doc ol{ margin:0.75rem 0 0; padding-left:1.3rem; color:var(--text-muted); font-size:0.95rem; line-height:1.68; display:flex; flex-direction:column; gap:0.5rem; }
-.ifu-download{ display:flex; align-items:center; gap:1rem; flex-wrap:wrap; padding:1.25rem 1.5rem; border:1px solid var(--border-strong); border-radius:var(--radius); background:var(--surface); margin-bottom:1.5rem; max-width:820px; }
-.ifu-download p{ margin:0; color:var(--text-muted); font-size:0.9rem; }
-.ifu-toc{ max-width:820px; border:1px solid var(--border-strong); border-radius:var(--radius); padding:1.5rem 1.75rem; margin-bottom:2.5rem; }
-.ifu-toc h4{ font-family:var(--mono); font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-muted); margin:0 0 1.1rem; font-weight:500; }
-.ifu-toc ol{ display:grid; grid-template-columns:1fr 1fr; gap:0.3rem 2rem; list-style:none; margin:0; padding:0; counter-reset:ifu-toc; }
-.ifu-toc li{ counter-increment:ifu-toc; }
-.ifu-toc a{ display:flex; gap:0.65rem; align-items:baseline; color:var(--text); text-decoration:none; font-size:0.92rem; font-weight:600; padding:0.4rem 0; border-bottom:1px solid var(--border); }
-.ifu-toc li:last-child a{ border-bottom:none; }
-.ifu-toc a:hover{ color:var(--accent-ink); }
-.ifu-toc a::before{ content:counter(ifu-toc, decimal-leading-zero); font-family:var(--mono); font-size:0.78rem; color:var(--accent-ink); font-weight:600; flex:none; }
-@media (max-width:640px){ .ifu-toc ol{grid-template-columns:1fr;} }
-.ifu-table{ width:100%; border-collapse:collapse; margin-top:0.75rem; font-size:0.9rem; }
-.ifu-table th, .ifu-table td{ text-align:left; padding:0.6rem 0.8rem; border:1px solid var(--border); vertical-align:top; }
-.ifu-table th{ font-family:var(--mono); font-size:0.66rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--text-muted); background:var(--surface); }
+.ifu-download{ display:flex; flex-direction:column; align-items:flex-start; gap:1.5rem; padding:clamp(2rem,4vw,3rem); border:1px solid var(--border-strong); border-radius:var(--radius); background:var(--surface); }
+.ifu-download p{ margin:0; color:var(--text-muted); font-size:1.05rem; line-height:1.65; max-width:56ch; }
 
 .cta-band{ background:var(--ink); color:var(--hero-text); }
 .cta-inner{ padding-block:clamp(2rem,4vw,3rem); display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:2rem; }
@@ -411,179 +393,21 @@ footer{ background:var(--hero-bg); color:var(--hero-text); }
 <header class="banner">
     <div class="wrap banner-inner">
       <span class="eyebrow eyebrow-hero">Instructions for Use</span>
-      <h1 style="margin-top:0.85rem;">LightningWire™ TPS &mdash; Instructions for Use</h1>
-      <p>Rev C, April 2026. Failure to carefully read, understand, and follow all instructions (including all contraindications, warnings, and precautions) may result in injury or death to the patient and/or healthcare providers.</p>
+      <h1 style="margin-top:0.85rem;">LightningWire&trade; TPS &mdash; Instructions for Use</h1>
+      <p>Failure to carefully read, understand, and follow all instructions (including all contraindications, warnings, and precautions) may result in injury or death to the patient and/or healthcare providers.</p>
     </div>
   </header>
-<section style="padding-bottom:0;">
-    <div class="wrap">
+<section>
+    <div class="wrap" style="max-width:720px;">
       <div class="ifu-download">
-        <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true" style="flex:none;">
+        <svg width="32" height="32" viewBox="0 0 28 28" aria-hidden="true" style="flex:none;">
           <rect x="5" y="3" width="18" height="22" rx="1.5" fill="none" stroke="var(--text-muted)" stroke-width="1.4"/>
           <line x1="9" y1="9" x2="19" y2="9" stroke="var(--text-muted)" stroke-width="1.2"/>
           <line x1="9" y1="13" x2="19" y2="13" stroke="var(--text-muted)" stroke-width="1.2"/>
           <path d="M9 17 L14 22 L19 17" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        <p>ElectroWire Medical provides online Instructions for Use (IFU), which should be reviewed and available for reference before starting procedures. The content below reflects Rev C, April 2026. A downloadable PDF version will be hosted here for offline review and printing.</p>
-      </div>
-      <div class="ifu-toc">
-        <h4>Contents</h4>
-        <ol>
-          <li><a href="#device-description">I. Device Description</a></li>
-          <li><a href="#indications">II. Indications for Use</a></li>
-          <li><a href="#contraindications">III. Contraindications</a></li>
-          <li><a href="#warnings">IV. Warnings</a></li>
-          <li><a href="#precautions">V. Precautions</a></li>
-          <li><a href="#complications">VI. Potential Complications</a></li>
-          <li><a href="#ancillary-devices">VII. Ancillary Devices Required But Not Provided</a></li>
-          <li><a href="#inspection">VIII. Inspection Prior to Use</a></li>
-          <li><a href="#storage-handling">IX. Storage and Handling</a></li>
-          <li><a href="#directions-for-use">X. Directions for Use</a></li>
-          <li><a href="#troubleshooting">XI. Troubleshooting</a></li>
-          <li><a href="#customer-service">XII. Customer Service and Product Return Information</a></li>
-          <li><a href="#labeling-symbols">XIII. Labeling and Symbols</a></li>
-        </ol>
-      </div>
-    </div>
-  </section>
-<section style="padding-top:0;">
-    <div class="wrap">
-      <div class="ifu-doc">
-        <h3 id="device-description">I. Device Description</h3>
-        <p>The LightningWire&trade; Transseptal Puncture System (TPS) is a needle&#8209;free, powered, wire&#8209;based TPS that is used to create an inter&#8209;atrial septal defect, enabling transseptal access to the left atrium. It consists of a LightningWire with proprietary hydrophobic coating and an Activation Cable. It is a monopolar transcatheter electrosurgical accessory, wherein the tip of the LightningWire is the active electrode. The LightningWire is designed to be inserted through a commercially available transseptal introducer set and features visible markers along its length to assist with aligning the wire tip in a compatible transseptal sheath and/or dilator assembly. The LightningWire is reversibly connected to a commercially available electrosurgical generator (ESG) by the Activation Cable, which includes an Activation Button that controls the flow of radiofrequency (RF) energy. The length of the Activation Cable is 3 meters. The LightningWire TPS is provided sterile and is for single use.</p>
-        <table class="ifu-table">
-          <thead><tr><th>Model No.</th><th>Length</th><th>Support Level</th></tr></thead>
-          <tbody>
-            <tr><td>01&#8209;180</td><td>180&thinsp;cm</td><td>Extra Support (ES)</td></tr>
-            <tr><td>01&#8209;260</td><td>260&thinsp;cm</td><td>Extra Support (ES)</td></tr>
-          </tbody>
-        </table>
-
-        <h3 id="indications">II. Indications for Use</h3>
-        <p>The LightningWire TPS is used to create an atrial septal defect in the heart, whereby various cardiovascular catheters are introduced.</p>
-
-        <h3 id="contraindications">III. Contraindications</h3>
-        <p>The LightningWire TPS is not recommended for use with:</p>
-        <ul>
-          <li>Any conditions that do not require the creation of an atrial septal defect</li>
-          <li>Known or suspected atrial thrombus</li>
-          <li>Known or suspected atrial myxoma</li>
-          <li>Cerebrovascular accident (CVA) within one week</li>
-          <li>Any indication of increased risk of life&#8209;threatening bleeding with anticoagulation</li>
-          <li>Any inability to tolerate anticoagulation for any reason</li>
-          <li>History of inter&#8209;atrial septal patch repair</li>
-          <li>History of device closure of atrial septal defect or patent foramen ovale</li>
-        </ul>
-
-        <h3 id="warnings">IV. Warnings</h3>
-        <ul>
-          <li>Only physicians with appropriate training, a thorough understanding of fluoroscopically and echocardiographically guided transseptal puncture, and a thorough understanding of electrosurgery should use this device.</li>
-          <li>The LightningWire TPS is supplied STERILE using an ethylene oxide process. Do not use if the package appears to have been opened or is damaged.</li>
-          <li>If fluoroscopy is used, patients and healthcare providers may be exposed to ionizing radiation during inter&#8209;atrial septal puncture procedures. Fluoroscopy use should be managed according to the ALARA (&ldquo;as low as reasonably achievable&rdquo;) principle.</li>
-          <li>RF energy should be applied only under the immediate control of a physician who may be expected to interrupt RF energy application at the first sign of unexpected results.</li>
-          <li>The patient&rsquo;s heart rhythm and hemodynamic parameters should be monitored during the procedure.</li>
-          <li>The LightningWire TPS should not be altered in any way. Doing so may make its use unsafe.</li>
-          <li>The LightningWire TPS is intended for single patient use only. Do not attempt re&#8209;sterilization or reuse.</li>
-          <li>The LightningWire TPS should be used only with ESGs having a maximum open circuit peak&#8209;to&#8209;peak voltage (V<sub>p&#8209;p</sub>) output of 3000 volts or less in the &ldquo;pure cut&rdquo; (continuous sinusoidal) mode. The LightningWire TPS is a Type CF device and rated for 623 volts maximum.</li>
-          <li>The LightningWire TPS should be used only with ESGs having a monopolar accessory port configured for use with industry&#8209;standard electrosurgical pencils, and only with defibrillation&#8209;proof ESGs.</li>
-          <li>The LightningWire must be used with the Activation Cable provided. Attempts to use it with other connector cables can result in injury to the patient and/or operator.</li>
-          <li>The LightningWire must be used with commercially available 0.032&Prime;&ndash;0.035&Prime; compatible transseptal introducer sets, used according to the manufacturer&rsquo;s instructions.</li>
-          <li>The distal tip and distal curve of the LightningWire are fragile. Do not attempt to straighten the distal tip if bent, or to straighten or reshape the preformed pigtail shape.</li>
-          <li>The LightningWire TPS is not intended for use in children or in pregnant or nursing women.</li>
-          <li>Do not attempt to insert or retract the LightningWire through a metal cannula or a percutaneous needle, or attempt to snare the LightningWire.</li>
-          <li>Do not press the Activation Button when the tip of the LightningWire is proximal to the tip of the transseptal introducer set&rsquo;s dilator, or more than 5&thinsp;mm beyond it.</li>
-          <li>Do not use &ldquo;cut&rdquo; or &ldquo;coag&rdquo; power settings other than those described in Section&nbsp;X below.</li>
-        </ul>
-
-        <h3 id="precautions">V. Precautions</h3>
-        <ul>
-          <li>Do not attempt to use the LightningWire TPS before thoroughly reading the Instructions for Use.</li>
-          <li>RF puncture procedures should be performed only by physicians thoroughly trained in the techniques of RF&#8209;powered puncture in a fully equipped catheterization laboratory.</li>
-          <li>Visually inspect the sterile packaging and the LightningWire TPS prior to use. Do not use any damaged, defective, or expired devices.</li>
-          <li>Read, understand, and follow the manufacturer&rsquo;s Instructions for Use for the transseptal introducer set, the ESG, and the patient return electrode used with the LightningWire TPS.</li>
-          <li>Always use patient return electrodes that meet or exceed IEC&nbsp;60601&#8209;2&#8209;2 requirements.</li>
-          <li>In order to prevent the risk of ignition, ensure that flammable materials are not present in the room during RF energy application.</li>
-          <li>Do not excessively bend the LightningWire, and avoid vessel trauma &mdash; do not use excessive force to advance or withdraw the LightningWire or ancillary sheath/dilator assemblies.</li>
-          <li>LightningWire and ancillary device advancement should be done under imaging guidance. Visible markers are only an approximate guide for positioning the tip near the distal end of the dilator.</li>
-          <li>Care should be taken to avoid interaction between the LightningWire and intra&#8209;cardiac devices such as pacemaker or defibrillator leads.</li>
-          <li>Do not attempt to deliver RF energy until the active tip is confirmed to be in good contact with the target tissue on the inter&#8209;atrial septum.</li>
-          <li>Do not exceed five (5) RF energy applications to a single LightningWire.</li>
-          <li>Never disconnect the Activation Cable from the ESG while RF energy is being delivered, or by pulling on the cable.</li>
-          <li>Electroanatomical mapping (EAM) guidance with the LightningWire TPS has not been studied.</li>
-        </ul>
-
-        <h3 id="complications">VI. Potential Complications</h3>
-        <p>Adverse events that may occur while creating an atrial septal defect include:</p>
-        <div class="isi-complications">
-          <span>Allergic reaction</span><span>Sepsis/Infection</span><span>Thromboembolic events</span>
-          <span>Vessel perforation</span><span>Atrial Flutter or Fibrillation</span><span>Myocardial Infarction</span>
-          <span>Vessel spasm</span><span>Ventricular arrhythmias</span><span>Stroke</span>
-          <span>Hemorrhage</span><span>Vascular thrombosis</span><span>Perforation of the myocardium</span>
-          <span>Hematoma</span><span>Arteriovenous fistula</span><span>Ventricular Tachycardia</span>
-          <span>Pain and/or Tenderness</span><span>Vascular Trauma</span><span>Pericardial effusion</span>
-          <span>Tachycardia</span><span>Foreign body/wire fracture</span><span>Pericardial tamponade</span>
-          <span>Wire entrapment/entanglement</span><span>Thermal injury</span><span>Additional Surgical Procedure</span>
-        </div>
-        <p>Consult the respective manufacturer&rsquo;s labeling for potential complications associated with the use of ancillary devices that may be used in conjunction with the LightningWire TPS.</p>
-
-        <h3 id="ancillary-devices">VII. Ancillary Devices Required But Not Provided</h3>
-        <ul>
-          <li>Conventional percutaneous needle for initiating vascular access</li>
-          <li>0.032&Prime;&ndash;0.035&Prime; compatible transseptal introducer set (sheath and dilator), such as the Agilis NxT and Fast&#8209;Cath SL1, which were subject to compatibility testing with the LightningWire TPS</li>
-          <li>ESG with maximum open circuit peak&#8209;to&#8209;peak voltage of no more than 3000&thinsp;V in &ldquo;pure cut&rdquo; mode, with a monopolar accessory port for industry&#8209;standard electrosurgical pencils. The Megadyne Mega Power 1000 was subject to compatibility testing with the LightningWire TPS.</li>
-          <li>Patient return electrode meeting or exceeding IEC&nbsp;60601&#8209;2&#8209;2 requirements</li>
-        </ul>
-
-        <h3 id="inspection">VIII. Inspection Prior to Use</h3>
-        <p>The LightningWire TPS is provided in a cardboard shelf box containing a thermoformed tray within a Tyvek&trade; pouch. Examine the pouch for damage and confirm the correct device and expiration via the box and pouch labels. Do not use expired or damaged product.</p>
-
-        <h3 id="storage-handling">IX. Storage and Handling</h3>
-        <p>Store in a cool, dry place, out of sunlight. Dispose of used product in accordance with the facility&rsquo;s standard for solid and sharps biohazard waste procedures.</p>
-
-        <h3 id="directions-for-use">X. Directions for Use</h3>
-        <ol>
-          <li>Use aseptic technique when opening the package and handling the devices in the sterile field.</li>
-          <li>Place the patient return electrode and connect the Activation Cable&rsquo;s ESG connector to the compatible ESG&rsquo;s monopolar accessory port.</li>
-          <li>Adjust the ESG power settings to provide 15&thinsp;W of &ldquo;cut&rdquo; and 0&thinsp;W (or minimum allowed) of &ldquo;coag,&rdquo; yielding a &ldquo;pure cut&rdquo; waveform.</li>
-          <li>Prepare the transseptal introducer set and flush the wire lumen of the dilator with sterile fluid. Perform standard femoral vein access and advance the introducer set to the SVC.</li>
-          <li>Exchange the guidewire for the LightningWire using the provided tip straightener, and position the wire tip at the dilator tip using imaging guidance and the visible markers.</li>
-          <li>Insert the proximal end of the LightningWire into the Activation Cable&rsquo;s Handswitch and tighten the tightener cap to secure the connection.</li>
-          <li>Withdraw the transseptal assembly into the right atrium and place the dilator tip against the fossa ovalis (FO), confirming tenting under imaging guidance.</li>
-          <li>Advance the LightningWire so the distal tip engages the septum at the FO, not extending more than 5&thinsp;mm beyond the dilator tip.</li>
-          <li>Deliver RF energy by pressing the Activation Button. Watch for the tip to cross the septum and/or microbubbles in the left atrium, and release as soon as either is seen &mdash; typically in under one second, up to a maximum of 3 seconds.</li>
-          <li>If the septum is not crossed after 3 seconds, release the button and retry; increasing power in 5&#8209;W increments (up to 25&thinsp;W) may help. Discard the LightningWire after five unsuccessful attempts.</li>
-          <li>Once crossed, mechanically advance the LightningWire without further RF energy until the full pigtail shape is observed in the left atrium.</li>
-          <li>Remove the Activation Cable by loosening the tightener cap. The LightningWire may be used to deliver diagnostic and/or therapeutic devices to the left atrium.</li>
-          <li>Withdraw the LightningWire slowly when use is complete, using imaging guidance if resistance is felt.</li>
-        </ol>
-        <table class="ifu-table">
-          <thead><tr><th>Parameter</th><th>Setting</th></tr></thead>
-          <tbody>
-            <tr><td>Cut Power</td><td>15&ndash;25&thinsp;W</td></tr>
-            <tr><td>Coag Power</td><td>0&thinsp;W (or minimum setting allowed)</td></tr>
-            <tr><td>RF Energy Application Time (per application)</td><td>Less than 1&thinsp;s, up to a maximum of 3&thinsp;s</td></tr>
-            <tr><td>Maximum Number of RF Energy Applications</td><td>5</td></tr>
-          </tbody>
-        </table>
-
-        <h3 id="troubleshooting">XI. Troubleshooting</h3>
-        <table class="ifu-table">
-          <thead><tr><th>Problem</th><th>Troubleshooting</th></tr></thead>
-          <tbody>
-            <tr><td>LightningWire&rsquo;s proximal end cannot be inserted into Handswitch.</td><td>Check that the tightener cap is not too tight.</td></tr>
-            <tr><td>ESG connector does not fit into ESG.</td><td>Check ESG compatibility, the monopolar accessory port, and connector pin alignment.</td></tr>
-            <tr><td>ESG displays an error message.</td><td>Consult the ESG manufacturer&rsquo;s Instructions for Use.</td></tr>
-            <tr><td>RF energy is not being delivered.</td><td>Check that the ESG connector and LightningWire are securely inserted and connected.</td></tr>
-            <tr><td>LightningWire breaks or kinks.</td><td>Discard and replace the LightningWire.</td></tr>
-          </tbody>
-        </table>
-
-        <h3 id="customer-service">XII. Customer Service and Product Return Information</h3>
-        <p>If you have any problems with or questions about the LightningWire TPS, contact LightningWire technical support personnel. A return authorization number is required before shipping any product back to ElectroWire Medical, and used devices must be decontaminated per the guidelines of the hospital where the device was used before return.</p>
-        <p>ElectroWire Medical<br>143 Industrial Dr.<br>Lexington, SC 29072 USA<br>(800) 654&#8209;8238<br>info@electrowiremedical.com</p>
-
-        <h3 id="labeling-symbols">XIII. Labeling and Symbols</h3>
-        <p>Full ISO/IEC 15223&#8209;1 labeling symbols (manufacturer, date of manufacture, do not reuse, sterilized using ethylene oxide, Rx only, MR unsafe, and others) are defined in the downloadable PDF version of this document.</p>
+        <p>The current Instructions for Use (IFU) for the LightningWire&trade; Transseptal Puncture System, including full labeling symbols, is available as a downloadable PDF. Please review it in full before starting a procedure.</p>
+        <a class="btn btn-primary" href="assets/ifu-electrowire.pdf" target="_blank" rel="noopener">Download PDF &darr;</a>
       </div>
     </div>
   </section>

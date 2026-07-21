@@ -100,11 +100,11 @@ sup.fn{ font-family:var(--mono); font-size:0.7em; color:var(--accent-ink); margi
 
 /* Nav */
 .nav{ position:sticky; top:0; z-index:50; background:color-mix(in srgb, var(--hero-bg) 88%, transparent); backdrop-filter:blur(10px); border-bottom:1px solid rgba(244,245,241,0.12); }
-.nav-inner{ display:flex; align-items:center; justify-content:space-between; gap:1.5rem; padding-block:1.25rem; max-width:1600px; }
+.nav-inner{ display:flex; align-items:center; justify-content:space-between; gap:1.5rem; padding-block:0.85rem; max-width:1600px; }
 .brand{ display:flex; flex-direction:row; align-items:center; gap:0.9rem; color:var(--hero-text); text-decoration:none; }
 .brand-name{ font-family:var(--display); font-weight:800; font-size:1.02rem; letter-spacing:-0.01em; display:flex; align-items:center; gap:0.35rem; }
 .brand-bolt{ height:0.95em; width:auto; display:inline-block; }
-.nav-logo{ height:clamp(4.5rem,8vw,6.5rem); width:auto; display:block; }
+.nav-logo{ height:clamp(2.75rem,5.5vw,4rem); width:auto; display:block; }
 .nav-product-tag{ font-family:var(--mono); font-size:clamp(1rem,1.4vw,1.3rem); font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--hero-text); border-left:1px solid rgba(244,245,241,0.28); padding-left:0.9rem; white-space:nowrap; }
 @media (max-width:640px){ .nav-product-tag{ display:none; } }
 .footer-logo-row{ gap:0.3rem; }
@@ -360,6 +360,8 @@ footer{ background:var(--hero-bg); color:var(--hero-text); }
 .footer-col ul{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:0.65rem; }
 .footer-col a{ color:var(--hero-text); text-decoration:none; font-size:0.92rem; }
 .footer-col a:hover{ color:var(--accent-hero); }
+.footer-social{ display:inline-flex; align-items:center; gap:0.55rem; }
+.footer-social svg{ flex:none; }
 .footer-bottom{ border-top:1px solid rgba(244,245,241,0.14); padding-block:1.5rem; display:flex; flex-wrap:wrap; gap:1rem; justify-content:space-between; color:var(--hero-muted); font-size:0.8rem; }
 .concept-note{ font-family:var(--mono); }
 @media (max-width:900px){ .footer-inner{grid-template-columns:1fr 1fr; gap:2rem;} }
@@ -532,7 +534,7 @@ footer{ background:var(--hero-bg); color:var(--hero-text); }
   <div class="wrap footer-inner">
     <div class="footer-brand">
       <span class="brand-name footer-logo-row">ElectroWire Medical<img class="brand-bolt footer-bolt" src="assets/931c6688c617adcc.png" alt="" aria-hidden="true"></span>
-      <p>Transseptal access technology for interventional cardiology and electrophysiology. Headquartered in Lexington, South Carolina.</p>
+      <p>Transseptal access technology for interventional cardiology and cardiac electrophysiology.</p>
     </div>
     <div class="footer-col">
       <h4>Site</h4>
@@ -549,8 +551,8 @@ footer{ background:var(--hero-bg); color:var(--hero-text); }
       <ul>
         <li><a href="tel:8006548238">800-654-8238</a></li>
         <li><a href="mailto:info@electrowiremedical.com">info@electrowiremedical.com</a></li>
-        <li><a href="https://www.linkedin.com/company/102026431" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="https://x.com/ElectroWire_Med" target="_blank" rel="noopener">X (Twitter)</a></li>
+        <li><a class="footer-social" href="https://www.linkedin.com/company/102026431" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 24 24" fill="#0A66C2" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a></li>
+        <li><a class="footer-social" href="https://x.com/ElectroWire_Med" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>X</a></li>
       </ul>
     </div>
   </div>
@@ -559,8 +561,9 @@ footer{ background:var(--hero-bg); color:var(--hero-text); }
   </div>
 </footer>
 <div class="safety-strip" style="background:var(--hero-bg-2); border-top:1px solid rgba(244,245,241,0.1);">
-  <div class="wrap" style="padding-block:0.9rem;">
-    <p style="font-family:var(--mono); font-size:0.76rem; color:var(--hero-muted);">LightningWire&trade; Transseptal Puncture System &mdash; Rx only. See <a href="ifu.html" style="color:var(--hero-text); text-decoration:underline; text-underline-offset:2px;">Instructions for Use</a> and <a href="isi.html" style="color:var(--hero-text); text-decoration:underline; text-underline-offset:2px;">Important Safety Information</a>.</p>
+  <div class="wrap" style="padding-block:0.9rem; display:flex; flex-direction:column; gap:0.5rem;">
+    <p style="font-family:var(--mono); font-size:0.76rem; color:var(--hero-muted);">LightningWire&trade; Transseptal Puncture System &mdash; Rx only. See <a href="isi.html" style="color:var(--hero-text); text-decoration:underline; text-underline-offset:2px;">Important Safety Information</a>.</p>
+    <p style="font-family:var(--mono); font-size:0.72rem; color:var(--hero-muted); opacity:0.85;">Images above may show compatible third-party components for demonstration only. No affiliation or endorsement is implied.</p>
   </div>
 </div>
 
